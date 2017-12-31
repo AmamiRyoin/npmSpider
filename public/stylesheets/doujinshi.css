@@ -1,0 +1,79 @@
+body {
+    color: #333333;
+    padding:0 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-image:url("http://products.web-giga.com/furukiss/img/topv_1.jpg");
+    background-position: left top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+a {
+    color: #333333;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #da00dd;
+}
+
+#body #doujinshi div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+div .fl-p{
+    width:20%;
+    margin:2%;
+    padding:5px;
+    -webkit-border-radius:15px;
+    -moz-border-radius:15px;
+    border-radius:15px;
+    background-color: rgba(255,255,255,.6);
+}
+div .fl-p:hover{
+    -webkit-box-shadow: 5px 5px 5px 5px rgba(0,0,0,.3);
+    -moz-box-shadow: 5px 5px 5px 5px rgba(0,0,0,.3);
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0,.3);
+    background-color: rgba(255,255,255,.8);
+}
+div .fl-p div{
+    margin:0 0 10px 0;
+}
+div .fl-p div:first-child{
+    height: 300px;
+    width: 312px;
+    display: table-cell;
+    vertical-align: middle;
+}
+div .fl-p div .img-c{
+    margin: 0 auto;display: block;
+}
+div .fl-p .fl-t a:hover{
+    color: #da00dd;
+}
+.see-m{
+    width:200px;
+    height:40px;
+    line-height:40px;
+    border:1px solid #333333;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    border-radius:10px;
+    font-size:16px;
+    margin:0 auto;
+    background-color: rgba(255,255,255,0.7);
+    cursor: pointer;
+}
+
+.see-m a{
+    margin:0 auto;
+}
+
+.see-m:hover{
+    -webkit-box-shadow: 5px 5px 5px 5px rgba(0,0,0,.3);
+    -moz-box-shadow: 5px 5px 5px 5px rgba(0,0,0,.3);
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0,.3);
+    background-color: rgba(255,255,255,.8);
+}
