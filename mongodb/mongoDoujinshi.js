@@ -1,22 +1,22 @@
 /**
  * Created by amamiryoin on 2017/12/24.
  */
-let SchemaInsert = (obj)=>{
+let SchemaInsert = (obj) => {
     let DoujinshiSchema = require('./mongoSchema.js');
     let DoujinshiItem = new DoujinshiSchema({
-        doujinshiName:obj.title,
-        doujinshiAuthor:obj.author,
-        doujinshiImage:obj.imageSrc,
-        doujinshiLink:obj.href,
-        doujinshiDownload:obj.download,
-        doujinshiAuthorLink:obj.authorHref
+        doujinshiName: obj.title,
+        doujinshiAuthor: obj.author,
+        doujinshiImage: obj.imageSrc,
+        doujinshiLink: obj.href,
+        doujinshiDownload: obj.download,
+        doujinshiAuthorLink: obj.authorHref
     });
 
-    DoujinshiItem.save((err,res)=>{
-        if(err){
-            console.log(err);
-        }else{
-            console.log(res);
+    DoujinshiItem.save((err, res) => {
+        if (err) {
+            //console.log(err);
+        } else {
+            //console.log(res);
         }
     });
 
