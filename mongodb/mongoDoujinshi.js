@@ -9,7 +9,8 @@ let SchemaInsert = (obj) => {
         doujinshiImage: obj.imageSrc,
         doujinshiLink: obj.href,
         doujinshiDownload: obj.download,
-        doujinshiAuthorLink: obj.authorHref
+        doujinshiAuthorLink: obj.authorHref,
+        doujinshiType:obj.type
     });
 
     DoujinshiItem.save((err, res) => {

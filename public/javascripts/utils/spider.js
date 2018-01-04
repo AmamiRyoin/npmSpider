@@ -40,11 +40,13 @@ let eHentaiSpider = () => {
                     let _authorHref = $(item).find(".itu").find('a').attr("href");
                     SchemaInsert({
                         title: _title,
-                        imageSrc: _imageSrc,
+                        //imageSrc: _imageSrc,
+                        imageSrc: 'https://upload-images.jianshu.io/upload_images/2875653-e15cadc43a014939.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/540',
                         href: _href,
                         download: _downloadHref !== undefined ? _downloadHref : '',
                         author: _author,
-                        authorHref: _authorHref
+                        authorHref: _authorHref,
+                        type:''
                     });
                     // infos.push({
                     //     title: _title,

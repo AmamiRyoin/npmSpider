@@ -2,7 +2,7 @@
  * Created by amamiryoin on 2017/5/31.
  */
 import {combineReducers} from 'react-redux';
-import {loadMore,LOAD_MORE} from "../actions/action";
+import {loadMore,LOAD_MORE,SEAECH_DOUJINSHI} from "../actions/action";
 
 let utils = (state,action)=>{
     let defaultState = {
@@ -10,14 +10,16 @@ let utils = (state,action)=>{
     }
     state = state || defaultState;
     switch (action.type){
-        case (action.type) :
-            return {
-                page:state.page+1
-            };
+        case (LOAD_MORE) :
+            return Object.assign({}, state, {
+                page: action.index+1
+            });
+        case (SEAECH_DOUJINSHI):
+            return Object.assign({}, state, {
+                query: action.index
+            });
         default:
-            return {
-                page:state.page
-            };
+            return state;
     }
 }
 

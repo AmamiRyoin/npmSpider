@@ -5,7 +5,9 @@ import React from "react";
 import ReactDOM from  'react-dom';
 import { BrowserRouter, Route} from 'react-router-dom';
 import DoujinshiView from './doujinshi/doujinshiView';
-import SearchComponent from './search/search'
+import SearchComponent from './search/search';
+import Store from '../store/store';
+Store.subscribe(()=>{});
 ReactDOM.render(
     (<BrowserRouter>
         <div>

@@ -2,7 +2,7 @@
  * Created by amamiryoin on 2017/5/26.
  */
 import React, { Component } from 'react';
-import LoadMore from '../../actions/action';
+import {Actions} from '../../actions/action';
 import Store from '../../store/store';
 export default class LoadMoreButton extends React.Component{
     constructor(props){
@@ -21,7 +21,7 @@ export default class LoadMoreButton extends React.Component{
     render(){
         let _page = 0;
         return(
-            <div className="see-m"><a onClick={()=>{Store.dispatch(LoadMore(_page))}}>点击加载</a></div>
+            <div className="see-m"><a onClick={()=>{Store.dispatch(Actions.loadMore(_page))}}>点击加载</a></div>
         )
     }
 }

@@ -2,7 +2,7 @@ body {
     color: #333333;
     padding: 0 50px;
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-    background-image: url("http://products.web-giga.com/furukiss/img/topv_1.jpg");
+    /* background-image: url("http://products.web-giga.com/furukiss/img/topv_1.jpg"); */
     background-position: left top;
     background-size: cover;
     background-repeat: no-repeat;
