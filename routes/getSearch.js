@@ -1,7 +1,7 @@
 /**
  * Created by amamiryoin on 2017/12/30.
  */
-let doujinshi = require('../mongodb/mongoSchema');
+// let doujinshi = require('../mongodb/mongoSchema');
 let express = require('express');
 let app = express();
 app.get('/api/doujinshi/search', (req, res) => {
@@ -16,6 +16,7 @@ app.get('/api/doujinshi/search', (req, res) => {
     //         _res.send(res);
     //     }
     // })
-    res.send(_query)
+    console.log(_query);
+    _res.send(_query);
 });
 app.listen(3000, 'localhost');

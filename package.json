@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
+    "start": "node ./routes/getSearch",
     "server": "node ./public/javascripts/utils/server",
     "spider": "node ./public/javascripts/utils/spider",
     "build": "webpack",
@@ -41,7 +41,8 @@
     "request": "^2.81.0",
     "style-loader": "^0.18.1",
     "webpack": "^2.6.0",
-    "webpack-dev-server": "^2.4.5"
+    "webpack-dev-server": "^2.4.5",
+    "whatwg-fetch": "^2.0.3"
   },
   "main": "webpack.config.js",
   "author": "",

@@ -25,8 +25,7 @@ export default class DoujinshiContainer extends React.Component {
                         />)
                     });
                 return ( <
-                    div > { doujinshiboxes } <
-                    /div>
+                    div > { doujinshiboxes } </div>
                 )
             }
         }
