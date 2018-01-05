@@ -9,15 +9,6 @@ import {Actions} from "../../actions/action";
 import {connect} from "react-redux";
 let infos = [];
 let page = 0;
-// $.ajax({
-//     type: "GET",
-//     url: "/api/doujinshi/search",
-//     dataType: "json",
-//     async: false,
-//     success: function(response, status, xhr) {
-//         infos.push.apply(infos, response);
-//     }
-// });
 
 class DoujinshiView extends React.Component {
     constructor(props) {
@@ -35,25 +26,32 @@ class DoujinshiView extends React.Component {
     componentDidMount(){
     }
 
+    componentDidUpdate(){
+        let querys = this.props.location.params;
+        // $.ajax({
+        //     url:'api/doujinshi/search',
+        //     method:'GET',
+        //     data:querys,
+        //     success:function(res){
+        //         console.log(res)
+        //     }
+        // });
+        fetch('/api/doujinshi/search',{
+            method:'POST',
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            body:JSON.stringify(querys)
+        }).then((response)=>{
+            // console.log(response.blob())
+            return response.json();
+        }).then((response)=>{
+            console.log(response)
+        })
+    }
+
     render() {
         let _this = this;
-        console.log("222",this.props)
-        // Store.subscribe(() => {
-        //     alert(Store.getState());
-            // if (Store.getState().page == 0 || Store.getState().page !== page) {
-            //     page = Store.getState().page;
-            //     $.ajax({
-            //         type: "GET",
-            //         url: "/api/doujinshi/search?doujinshiName=脸肿汉化组",
-            //         dataType: "json",
-            //         async: false,
-            //         success: function(response, status, xhr) {
-            //             infos.push.apply(infos, response);
-            //             _this.setState({ info: infos });
-            //         }
-            //     });
-            // }
-        // });
         return (
             < div id = "doujinshi" >
                 <DoujinshiContainer info = { this.state.info }/>

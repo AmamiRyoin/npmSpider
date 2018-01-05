@@ -12,7 +12,14 @@ module.exports = {
     },
     devServer:{
         inline:true,
-        port:8081
+        port:8081,
+        proxy:{//代理3000端口
+            '/api':{
+                target:'http://localhost:3000',
+                changeOrigin: true,//允许跨域
+                secure: false
+            }
+        }
     },
     module:{
         rules:[
