@@ -14,7 +14,7 @@ export default class DoujinshiContainer extends React.Component {
 
         render() {
             let doujinshiboxes = [];
-            this.state.info.forEach((item, index) => {
+            this.props.info.forEach((item, index) => {
                     doujinshiboxes.push( < Doujinshibox key = { 'doujinshi' + index }
                         imgSrc = { item.doujinshiImage }
                         title = { item.doujinshiName }

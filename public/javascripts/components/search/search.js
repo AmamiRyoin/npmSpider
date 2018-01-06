@@ -71,7 +71,7 @@ export default class SearchComponent extends React.Component{
                     <label>
                         <input className="keywords" type="text" onChange={this.getKeyword.bind(this)}/>
                     </label>
-                    <Link to={{pathname:'/index',search:`?keyword=${keyword}&checkCosplay=${checkCosplay}&checkImage=${checkImage}&checkManga=${checkManga}&checkDoujinshi=${checkDoujinshi}`
+                    <Link to={{pathname:'/index',search:`?doujinshiName=${keyword}&checkCosplay=${checkCosplay}&checkImage=${checkImage}&checkManga=${checkManga}&checkDoujinshi=${checkDoujinshi}`
                         ,params:{doujinshiName:keyword,checkCosplay:checkCosplay,checkImage:checkImage,checkManga:checkManga,checkDoujinshi:checkDoujinshi}}}><button>搜索</button></Link>
                 </div>
                 <div className="search-checks">

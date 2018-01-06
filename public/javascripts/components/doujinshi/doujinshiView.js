@@ -24,10 +24,8 @@ class DoujinshiView extends React.Component {
     }
 
     componentDidMount(){
-    }
-
-    componentDidUpdate(){
-        let querys = this.props.location.params;
+        let querys = this.props.location.search;
+        let _this = this;
         // $.ajax({
         //     url:'api/doujinshi/search',
         //     method:'GET',
@@ -36,22 +34,21 @@ class DoujinshiView extends React.Component {
         //         console.log(res)
         //     }
         // });
-        fetch('/api/doujinshi/search',{
-            method:'POST',
-            headers: {
-                "Content-Type": "application/x-www-form-urlencoded"
-            },
-            body:JSON.stringify(querys)
-        }).then((response)=>{
+        fetch('/api/doujinshi/search'+querys,).then((response)=>{
             // console.log(response.blob())
             return response.json();
         }).then((response)=>{
-            console.log(response)
+            _this.setState({info:response.data});
         })
+    }
+
+    componentDidUpdate(){
+
     }
 
     render() {
         let _this = this;
+        console.log(_this.state)
         return (
             < div id = "doujinshi" >
                 <DoujinshiContainer info = { this.state.info }/>
