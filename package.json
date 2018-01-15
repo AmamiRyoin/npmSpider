@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./routes/getSearch",
-    "server": "node ./public/javascripts/utils/server",
+    "server": "node ./routes/getSearch",
     "spider": "node ./public/javascripts/utils/spider",
     "build": "webpack",
     "webpack": "webpack-dev-server --devtool eval --progress --colors --inline --w --content-base build --history-api-fallback"

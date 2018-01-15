@@ -17,9 +17,14 @@ let SchemaInsert = (obj) => {
         if (err) {
             //console.log(err);
         } else {
+
             //console.log(res);
         }
     });
+
+
+
+
 
     // let DoujinshiUpdate = ()=>{
     //     let queryStr = {'doujinshiName':'abcd'},//搜索条件
